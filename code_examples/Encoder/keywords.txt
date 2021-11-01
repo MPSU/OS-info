@@ -1,0 +1,25 @@
+#######################################
+# Syntax Coloring Map For ENC
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+ENC	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+end	KEYWORD2
+getDir	KEYWORD2
+AttachInterrupt	KEYWORD2
+DettachInterrupt	KEYWORD2
+
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
