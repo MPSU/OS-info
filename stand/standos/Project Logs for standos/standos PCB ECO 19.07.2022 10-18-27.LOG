@@ -1,0 +1,44 @@
+Change Net Name : Old Net Name=MSP3521_CS New Net Name=MSP3520_CS
+Change Net Name : Old Net Name=MSP3521_DCRS New Net Name=MSP3520_DCRS
+Change Net Name : Old Net Name=MSP3521_MISO New Net Name=MSP3520_MISO
+Change Net Name : Old Net Name=MSP3521_MOSI New Net Name=MSP3520_MOSI
+Change Net Name : Old Net Name=MSP3521_RESET New Net Name=MSP3520_RESET
+Change Net Name : Old Net Name=MSP3521_T_CLK New Net Name=MSP3520_T_CLK
+Change Net Name : Old Net Name=MSP3521_T_CS New Net Name=MSP3520_T_CS
+Change Net Name : Old Net Name=MSP3521_T_DIN New Net Name=MSP3520_T_DIN
+Change Net Name : Old Net Name=MSP3521_T_DO New Net Name=MSP3520_T_DO
+Change Net Name : Old Net Name=MSP3521_T_IRQ New Net Name=MSP3520_T_IRQ
+Add Net: Net with name "NetD?_1" already exists
+Add Net: Net with name "NetD?_1" already exists
+Add Net: Net with name "NetD?_1" already exists
+Add Net: Net with name "NetD?_1" already exists
+Change Class Name : Old Net Name=N000-1_[7..0] New Net Name=N000-3_[7..0]
+Change Class Name : Old Net Name=N000-2_[7..0] New Net Name=N000-4_[7..0]
+Change Class Name : Old Net Name=N000-3_[1..0] New Net Name=N000-2_[1..0]
+Change Class Name : Old Net Name=N000-4_[2..0] New Net Name=N000-1_[2..0]
+Added Member To Class: ClassName=Peripherals Member=Component C? Cap Semi
+Added Member To Class: ClassName=USB Member=Component C? Cap Semi
+Added Member To Class: ClassName=USB Member=Component C? Cap Semi
+Added Member To Class: ClassName=USB Member=Component C? Cap Semi
+Added Member To Class: ClassName=USB Member=Component C? Cap Semi
+Added Member To Class: ClassName=USB Member=Component C? Cap Semi
+Added Member To Class: ClassName=Peripherals Member=Component D? LED2
+Added Member To Class: ClassName=Peripherals Member=Component D? LED2
+Added Member To Class: ClassName=USB Member=Component D? LED2
+Added Member To Class: ClassName=Commutation Member=Component P? Header 3X2
+Added Member To Class: ClassName=Commutation Member=Component P? Header 10X2
+Added Member To Class: ClassName=Peripherals Member=Component P? Header 8
+Added Member To Class: ClassName=Commutation Member=Component R? Res3
+Added Member To Class: ClassName=Peripherals Member=Component R? Res3
+Added Member To Class: ClassName=Peripherals Member=Component R? Res3
+Added Member To Class: ClassName=Peripherals Member=Component R? Res3
+Added Member To Class: ClassName=Peripherals Member=Component R? Res3
+Added Member To Class: ClassName=USB Member=Component R? Res3
+Added Member To Class: ClassName=USB Member=Component R? Res3
+Added Member To Class: ClassName=USB Member=Component R? Res3
+Added Member To Class: ClassName=USB Member=Component R? Res3
+Added Room: Name=Commutation
+Added Room: Name=Elvis_PCI
+Added Room: Name=Peripherals
+Added Room: Name=Raspberry Pi4
+Added Room: Name=USB
