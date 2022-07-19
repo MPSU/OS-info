@@ -1,0 +1,4 @@
+MAXSonar	KEYWORD1
+begin	KEYWORD2
+getDistance	KEYWORD2
+end	KEYWORD2
