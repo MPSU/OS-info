@@ -321,23 +321,6 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document17]
-DocumentPath=Main.Harness
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document18]
 DocumentPath=..\library\my_AP_lib_pcb.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -354,7 +337,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MWVPWYJR
 
-[Document19]
+[Document18]
 DocumentPath=..\library\my_AP_lib_sch.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -371,7 +354,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=AQKRETRB
 
-[Document20]
+[Document19]
 DocumentPath=STM32-Nucleo-144.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -388,7 +371,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BHDGCQRI
 
-[Document21]
+[Document20]
 DocumentPath=STM32-Nucleo-144.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -405,7 +388,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document22]
+[Document21]
 DocumentPath=Inertial_systems.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -422,7 +405,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LMBNOKTM
 
-[Document23]
+[Document22]
 DocumentPath=Inertial_systems.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -439,7 +422,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document24]
+[Document23]
 DocumentPath=Rangefinders.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -456,7 +439,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HNPYUGBX
 
-[Document25]
+[Document24]
 DocumentPath=Rangefinders.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -473,7 +456,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document26]
+[Document25]
 DocumentPath=Display.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -490,8 +473,25 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RFVAHETO
 
-[Document27]
+[Document26]
 DocumentPath=Display.Harness
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document27]
+DocumentPath=Main.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
