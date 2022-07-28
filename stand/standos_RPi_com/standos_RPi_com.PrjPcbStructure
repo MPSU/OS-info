@@ -1,0 +1,4 @@
+Record=TopLevelDocument|FileName=Comnunication.SchDoc|SheetNumber=1
+Record=SheetSymbol|SourceDocument=Comnunication.SchDoc|Designator=Variant 1|SchDesignator=Variant 1|FileName=Var1.SchDoc|SheetNumber=2|SymbolType=Normal|RawFileName=Var1.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Var1.SchDoc|Designator=Connector for Raspberri Pi|SchDesignator=Connector for Raspberri Pi|FileName=RPi_connector.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=RPi_connector.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=NoMainPathDocument|SourceDocument=Comnunication.SchDoc|FileName=Perph_connectors.SchDoc|SheetNumber=4

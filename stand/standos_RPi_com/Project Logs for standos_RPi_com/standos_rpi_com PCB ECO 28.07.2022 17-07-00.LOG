@@ -1,0 +1,102 @@
+Added Component: Designator=P11(PLD-20)
+Added Component: Designator=XS?(PBD-40)
+Added Component: Designator=XS?(PBD-16)
+Added Pin To Net: NetName=COLORSENSOR.INT Pin=XS?-1
+Added Pin To Net: NetName=STEPMOTOR.IN3 Pin=XS?-1
+Added Pin To Net: NetName=ADC.ALRT Pin=XS?-2
+Added Pin To Net: NetName=STEPMOTOR.IN4 Pin=XS?-2
+Added Pin To Net: NetName=COLORSENSOR.RST Pin=XS?-3
+Added Pin To Net: NetName=STEPMOTOR.IN1 Pin=XS?-3
+Added Pin To Net: NetName=MICROPHONE_DS Pin=XS?-4
+Added Pin To Net: NetName=STEPMOTOR.IN2 Pin=XS?-4
+Added Pin To Net: NetName=ENCODER.A Pin=XS?-5
+Added Pin To Net: NetName=GYROSCOPE.DR Pin=XS?-5
+Added Pin To Net: NetName=ENCODER.B Pin=XS?-6
+Added Pin To Net: NetName=GYROSCOPE.INT Pin=XS?-6
+Added Pin To Net: NetName=ENCODER.BTN Pin=XS?-7
+Added Pin To Net: NetName=GYROSCOPE.SDO Pin=XS?-7
+Added Pin To Net: NetName=ENCODER.SWT Pin=XS?-8
+Added Pin To Net: NetName=GYROSCOPE.CS Pin=XS?-8
+Added Pin To Net: NetName=GND Pin=XS?-9
+Added Pin To Net: NetName=NAV.SPI_3CS.nCE0 Pin=XS?-9
+Added Pin To Net: NetName=KEYPAD.Col1 Pin=XS?-10
+Added Pin To Net: NetName=NAV.SPI_3CS.MOSI Pin=XS?-10
+Added Pin To Net: NetName=KEYPAD.Row0 Pin=XS?-11
+Added Pin To Net: NetName=NAV.SPI_3CS.MISO Pin=XS?-11
+Added Pin To Net: NetName=KEYPAD.Col0 Pin=XS?-12
+Added Pin To Net: NetName=NAV.SPI_3CS.SCLK Pin=XS?-12
+Added Pin To Net: NetName=KEYPAD.Row3 Pin=XS?-13
+Added Pin To Net: NetName=NAV.DRDY_M Pin=XS?-13
+Added Pin To Net: NetName=KEYPAD.Col2 Pin=XS?-14
+Added Pin To Net: NetName=NAV.INT Pin=XS?-14
+Added Pin To Net: NetName=KEYPAD.Row2 Pin=XS?-15
+Added Pin To Net: NetName=NAV.SPI_3CS.nCE2 Pin=XS?-15
+Added Pin To Net: NetName=KEYPAD.Row1 Pin=XS?-16
+Added Pin To Net: NetName=NAV.SPI_3CS.nCE1 Pin=XS?-16
+Added Pin To Net: NetName=MAXSONAR.AN Pin=XS?-17
+Added Pin To Net: NetName=MAXSONAR.UART.RX Pin=XS?-18
+Added Pin To Net: NetName=MAXSONAR.UART.TX Pin=XS?-19
+Added Pin To Net: NetName=MAXSONAR.PWM Pin=XS?-20
+Added Pin To Net: NetName=ULTRASONIC_HC1.TRIG Pin=XS?-21
+Added Pin To Net: NetName=ULTRASONIC_HC1.ECHO Pin=XS?-22
+Added Pin To Net: NetName=ULTRASONIC_HC0.ECHO Pin=XS?-23
+Added Pin To Net: NetName=ULTRASONIC_HC0.TRIG Pin=XS?-24
+Added Pin To Net: NetName=RFID.RST Pin=XS?-25
+Added Pin To Net: NetName=RFID.IRQ Pin=XS?-26
+Added Pin To Net: NetName=RFID.SPI.MISO Pin=XS?-27
+Added Pin To Net: NetName=RFID.SPI.MOSI Pin=XS?-28
+Added Pin To Net: NetName=RFID.SPI.SCLK Pin=XS?-29
+Added Pin To Net: NetName=RFID.SPI.nCE Pin=XS?-30
+Added Pin To Net: NetName=DISPLAY.LCD.SPI.nCE Pin=XS?-32
+Added Pin To Net: NetName=DISPLAY.LCD.RESET Pin=XS?-33
+Added Pin To Net: NetName=DISPLAY.LCD.DC/RS Pin=XS?-34
+Added Pin To Net: NetName=DISPLAY.LCD.SPI.SCLK Pin=XS?-35
+Added Pin To Net: NetName=DISPLAY.LCD.SPI.MOSI Pin=XS?-37
+Added Pin To Net: NetName=DISPLAY.LCD.SPI.MISO Pin=XS?-38
+Added Pin To Net: NetName=DISPLAY.TOUCH.IRQ Pin=XS?-39
+Added Pin To Net: NetName=GND Pin=XS?-40
+Added Pin To Net: NetName=3V3 Pin=P11-1
+Added Net: Name=3V3
+Added Pin To Net: NetName=C5V Pin=P11-2
+Added Net: Name=C5V
+Added Pin To Net: NetName=DISPLAY.SDCARD Pin=XS?-31
+Added Net: Name=DISPLAY.SDCARD
+Added Pin To Net: NetName=DISPLAY.TOUCH.SPI Pin=XS?-36
+Added Net: Name=DISPLAY.TOUCH.SPI
+Add Net: Net with name "GND" already exists
+Added Pin To Net: NetName=RPi_GPIO.GPIO08 Pin=P11-19
+Added Net: Name=RPi_GPIO.GPIO08
+Added Pin To Net: NetName=RPi_GPIO.GPIO11 Pin=P11-20
+Added Net: Name=RPi_GPIO.GPIO11
+Added Pin To Net: NetName=RPi_GPIO.GPIO26 Pin=P11-17
+Added Net: Name=RPi_GPIO.GPIO26
+Added Pin To Net: NetName=RPi_GPIO.GPIO27 Pin=P11-18
+Added Net: Name=RPi_GPIO.GPIO27
+Added Pin To Net: NetName=RPi_SPI1.MISO Pin=P11-7
+Added Net: Name=RPi_SPI1.MISO
+Added Pin To Net: NetName=RPi_SPI1.MOSI Pin=P11-8
+Added Net: Name=RPi_SPI1.MOSI
+Added Pin To Net: NetName=RPi_SPI1.nCE0 Pin=P11-6
+Added Net: Name=RPi_SPI1.nCE0
+Added Pin To Net: NetName=RPi_SPI1.nCE1 Pin=P11-4
+Added Net: Name=RPi_SPI1.nCE1
+Added Pin To Net: NetName=RPi_SPI1.nCE2 Pin=P11-3
+Added Net: Name=RPi_SPI1.nCE2
+Added Pin To Net: NetName=RPi_SPI1.SCLK Pin=P11-5
+Added Net: Name=RPi_SPI1.SCLK
+Added Pin To Net: NetName=RPi_SPI4.MISO Pin=P11-12
+Added Net: Name=RPi_SPI4.MISO
+Added Pin To Net: NetName=RPi_SPI4.MOSI Pin=P11-13
+Added Net: Name=RPi_SPI4.MOSI
+Added Pin To Net: NetName=RPi_SPI4.nCE0 Pin=P11-10
+Added Net: Name=RPi_SPI4.nCE0
+Added Pin To Net: NetName=RPi_SPI4.nCE1 Pin=P11-9
+Added Net: Name=RPi_SPI4.nCE1
+Added Pin To Net: NetName=RPi_SPI4.SCLK Pin=P11-11
+Added Net: Name=RPi_SPI4.SCLK
+Added Pin To Net: NetName=RPi_UART5.RX Pin=P11-15
+Added Net: Name=RPi_UART5.RX
+Added Pin To Net: NetName=RPi_UART5.TX Pin=P11-16
+Added Net: Name=RPi_UART5.TX
+Added Class: Name=Connector for Raspberri Pi
+Added Class: Name=Peripherals

@@ -1,0 +1,22 @@
+Added Component: Designator=P1(PLD-20)
+Added Pin To Net: NetName=3V3 Pin=P1-1
+Added Pin To Net: NetName=C5V Pin=P1-2
+Added Pin To Net: NetName=RPi_SPI1.nCE2 Pin=P1-3
+Added Pin To Net: NetName=RPi_SPI1.nCE1 Pin=P1-4
+Added Pin To Net: NetName=RPi_SPI1.SCLK Pin=P1-5
+Added Pin To Net: NetName=RPi_SPI1.nCE0 Pin=P1-6
+Added Pin To Net: NetName=RPi_SPI1.MISO Pin=P1-7
+Added Pin To Net: NetName=RPi_SPI1.MOSI Pin=P1-8
+Added Pin To Net: NetName=RPi_SPI4.nCE1 Pin=P1-9
+Added Pin To Net: NetName=RPi_SPI4.nCE0 Pin=P1-10
+Added Pin To Net: NetName=RPi_SPI4.SCLK Pin=P1-11
+Added Pin To Net: NetName=RPi_SPI4.MISO Pin=P1-12
+Added Pin To Net: NetName=RPi_SPI4.MOSI Pin=P1-13
+Added Pin To Net: NetName=GND Pin=P1-14
+Added Pin To Net: NetName=RPi_UART5.RX Pin=P1-15
+Added Pin To Net: NetName=RPi_UART5.TX Pin=P1-16
+Added Pin To Net: NetName=RPi_GPIO.GPIO26 Pin=P1-17
+Added Pin To Net: NetName=RPi_GPIO.GPIO27 Pin=P1-18
+Added Pin To Net: NetName=MICROPHONE_DS Pin=P1-19
+Added Pin To Net: NetName=ADC.ALRT Pin=P1-20
+Added Member To Class: ClassName=Connector for Raspberri Pi Member=Component P1 PLD-20

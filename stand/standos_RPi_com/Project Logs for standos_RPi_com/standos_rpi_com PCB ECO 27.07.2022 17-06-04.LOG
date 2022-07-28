@@ -1,0 +1,122 @@
+Added Component: Designator=P1(PLD-8)
+Added Component: Designator=P2(PLD-4)
+Added Component: Designator=P3(PLD-6)
+Added Component: Designator=P4(PLD-10)
+Added Component: Designator=P5(PLD-8)
+Added Component: Designator=P6(PLD-4)
+Added Component: Designator=P7(PLD-4)
+Added Component: Designator=P8(PLD-4)
+Added Component: Designator=P9(PLD-4)
+Added Component: Designator=P10(PLD-4)
+Added Component: Designator=P11_Connector for Raspberri Pi1(PLD-20)
+Added Component: Designator=P11_Connector for Raspberri Pi2(PLD-20)
+Added Component: Designator=P12(PLD-20)
+Added Pin To Net: NetName=NAV.SPI_3CS.nCE0 Pin=P1-1
+Added Pin To Net: NetName=NAV.SPI_3CS.MOSI Pin=P1-2
+Added Pin To Net: NetName=NAV.SPI_3CS.MISO Pin=P1-3
+Added Pin To Net: NetName=NAV.SPI_3CS.SCLK Pin=P1-4
+Added Pin To Net: NetName=NAV.DRDY_M Pin=P1-5
+Added Pin To Net: NetName=NAV.INT Pin=P1-6
+Added Pin To Net: NetName=NAV.SPI_3CS.nCE2 Pin=P1-7
+Added Pin To Net: NetName=NAV.SPI_3CS.nCE1 Pin=P1-8
+Added Pin To Net: NetName=COLORSENSOR.INT Pin=P2-1
+Added Pin To Net: NetName=ADC.ALRT Pin=P2-2
+Added Pin To Net: NetName=COLORSENSOR.RST Pin=P2-3
+Added Pin To Net: NetName=MICROPHONE_DS Pin=P2-4
+Added Pin To Net: NetName=RFID.RST Pin=P3-1
+Added Pin To Net: NetName=RFID.IRQ Pin=P3-2
+Added Pin To Net: NetName=RFID.SPI.MISO Pin=P3-3
+Added Pin To Net: NetName=RFID.SPI.MOSI Pin=P3-4
+Added Pin To Net: NetName=RFID.SPI.SCLK Pin=P3-5
+Added Pin To Net: NetName=RFID.SPI.nCE Pin=P3-6
+Added Pin To Net: NetName=DISPLAY.SDCARD.nCE Pin=P4-1
+Added Pin To Net: NetName=DISPLAY.LCD.SPI.nCE Pin=P4-2
+Added Pin To Net: NetName=DISPLAY.LCD.RESET Pin=P4-3
+Added Pin To Net: NetName=DISPLAY.LCD.DC/RS Pin=P4-4
+Added Pin To Net: NetName=DISPLAY.LCD.SPI.SCLK Pin=P4-5
+Added Pin To Net: NetName=DISPLAY.TOUCH.SPI.nCE Pin=P4-6
+Added Pin To Net: NetName=DISPLAY.LCD.SPI.MOSI Pin=P4-7
+Added Pin To Net: NetName=DISPLAY.LCD.SPI.MISO Pin=P4-8
+Added Pin To Net: NetName=DISPLAY.TOUCH.IRQ Pin=P4-9
+Added Pin To Net: NetName=GND Pin=P4-10
+Added Pin To Net: NetName=GND Pin=P5-1
+Added Pin To Net: NetName=KEYPAD.Col1 Pin=P5-2
+Added Pin To Net: NetName=KEYPAD.Row0 Pin=P5-3
+Added Pin To Net: NetName=KEYPAD.Col0 Pin=P5-4
+Added Pin To Net: NetName=KEYPAD.Row3 Pin=P5-5
+Added Pin To Net: NetName=KEYPAD.Col2 Pin=P5-6
+Added Pin To Net: NetName=KEYPAD.Row2 Pin=P5-7
+Added Pin To Net: NetName=KEYPAD.Row1 Pin=P5-8
+Added Pin To Net: NetName=ULTRASONIC_HC1.TRIG Pin=P6-1
+Added Pin To Net: NetName=ULTRASONIC_HC1.ECHO Pin=P6-2
+Added Pin To Net: NetName=ULTRASONIC_HC0.ECHO Pin=P6-3
+Added Pin To Net: NetName=ULTRASONIC_HC0.TRIG Pin=P6-4
+Added Pin To Net: NetName=ENCODER.A Pin=P7-1
+Added Pin To Net: NetName=ENCODER.B Pin=P7-2
+Added Pin To Net: NetName=ENCODER.BTN Pin=P7-3
+Added Pin To Net: NetName=ENCODER.SWT Pin=P7-4
+Added Pin To Net: NetName=GYROSCOPE.DR Pin=P8-1
+Added Pin To Net: NetName=GYROSCOPE.INT Pin=P8-2
+Added Pin To Net: NetName=GYROSCOPE.SDO Pin=P8-3
+Added Pin To Net: NetName=GYROSCOPE.CS Pin=P8-4
+Added Pin To Net: NetName=STEPMOTOR.IN3 Pin=P9-1
+Added Pin To Net: NetName=STEPMOTOR.IN4 Pin=P9-2
+Added Pin To Net: NetName=STEPMOTOR.IN1 Pin=P9-3
+Added Pin To Net: NetName=STEPMOTOR.IN2 Pin=P9-4
+Added Pin To Net: NetName=MAXSONAR.AN Pin=P10-1
+Added Pin To Net: NetName=MAXSONAR.UART.RX Pin=P10-2
+Added Pin To Net: NetName=MAXSONAR.UART.TX Pin=P10-3
+Added Pin To Net: NetName=MAXSONAR.PWM Pin=P10-4
+Added Pin To Net: NetName=3V3_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-1
+Added Pin To Net: NetName=C5V_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-2
+Added Pin To Net: NetName=RPi_SPI1.nCE2_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-3
+Added Pin To Net: NetName=RPi_SPI1.nCE1_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-4
+Added Pin To Net: NetName=RPi_SPI1.SCLK_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-5
+Added Pin To Net: NetName=RPi_SPI1.nCE0_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-6
+Added Pin To Net: NetName=RPi_SPI1.MISO_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-7
+Added Pin To Net: NetName=RPi_SPI1.MOSI_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-8
+Added Pin To Net: NetName=RPi_SPI4.nCE1_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-9
+Added Pin To Net: NetName=RPi_SPI4.nCE0_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-10
+Added Pin To Net: NetName=RPi_SPI4.SCLK_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-11
+Added Pin To Net: NetName=RPi_SPI4.MISO_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-12
+Added Pin To Net: NetName=RPi_SPI4.MOSI_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-13
+Added Pin To Net: NetName=GND Pin=P11_Connector for Raspberri Pi1-14
+Added Pin To Net: NetName=RPi_UART5.RX_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-15
+Added Pin To Net: NetName=RPi_UART5.TX_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-16
+Added Pin To Net: NetName=RPi_GPIO.GPIO26_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-17
+Added Pin To Net: NetName=RPi_GPIO.GPIO27_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-18
+Added Pin To Net: NetName=RPi_GPIO.GPIO08_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-19
+Added Pin To Net: NetName=RPi_GPIO.GPIO11_Connector for Raspberri Pi1 Pin=P11_Connector for Raspberri Pi1-20
+Added Pin To Net: NetName=3V3_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-1
+Added Pin To Net: NetName=C5V_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-2
+Added Pin To Net: NetName=RPi_SPI1.nCE2_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-3
+Added Pin To Net: NetName=RPi_SPI1.nCE1_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-4
+Added Pin To Net: NetName=RPi_SPI1.SCLK_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-5
+Added Pin To Net: NetName=RPi_SPI1.nCE0_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-6
+Added Pin To Net: NetName=RPi_SPI1.MISO_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-7
+Added Pin To Net: NetName=RPi_SPI1.MOSI_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-8
+Added Pin To Net: NetName=RPi_SPI4.nCE1_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-9
+Added Pin To Net: NetName=RPi_SPI4.nCE0_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-10
+Added Pin To Net: NetName=RPi_SPI4.SCLK_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-11
+Added Pin To Net: NetName=RPi_SPI4.MISO_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-12
+Added Pin To Net: NetName=RPi_SPI4.MOSI_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-13
+Added Pin To Net: NetName=GND Pin=P11_Connector for Raspberri Pi2-14
+Added Pin To Net: NetName=RPi_UART5.RX_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-15
+Added Pin To Net: NetName=RPi_UART5.TX_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-16
+Added Pin To Net: NetName=RPi_GPIO.GPIO26_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-17
+Added Pin To Net: NetName=RPi_GPIO.GPIO27_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-18
+Added Pin To Net: NetName=RPi_GPIO.GPIO08_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-19
+Added Pin To Net: NetName=RPi_GPIO.GPIO11_Connector for Raspberri Pi2 Pin=P11_Connector for Raspberri Pi2-20
+Added Member To Class: ClassName=Variant 1 Member=Component P1 PLD-8
+Added Member To Class: ClassName=Variant 1 Member=Component P2 PLD-4
+Added Member To Class: ClassName=Variant 1 Member=Component P3 PLD-6
+Added Member To Class: ClassName=Variant 1 Member=Component P4 PLD-10
+Added Member To Class: ClassName=Variant 1 Member=Component P5 PLD-8
+Added Member To Class: ClassName=Variant 1 Member=Component P6 PLD-4
+Added Member To Class: ClassName=Variant 1 Member=Component P7 PLD-4
+Added Member To Class: ClassName=Variant 1 Member=Component P8 PLD-4
+Added Member To Class: ClassName=Variant 1 Member=Component P9 PLD-4
+Added Member To Class: ClassName=Variant 1 Member=Component P10 PLD-4
+Added Member To Class: ClassName=Connector for Raspberri Pi1 Member=Component P11_Connector for Raspberri Pi1 (P11) PLD-20
+Added Member To Class: ClassName=Connector for Raspberri Pi2 Member=Component P11_Connector for Raspberri Pi2 (P11) PLD-20
+Added Member To Class: ClassName=Comnunication Member=Component P12 PLD-20

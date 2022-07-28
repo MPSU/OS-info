@@ -1,0 +1,6 @@
+Change Component Designator: OldDesignator=XS? NewDesignator=XS1
+Change Component Designator: OldDesignator=XS? NewDesignator=XS2
+Added Pin To Net: NetName=MICROPHONE_DS Pin=P11-19
+Added Pin To Net: NetName=ADC.ALRT Pin=P11-20
+Add Net: Net with name "GND" already exists
+Added Member To Class: ClassName=Peripherals Member=Component XS2 PBD-40

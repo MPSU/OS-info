@@ -1,0 +1,89 @@
+Add Component: Footprint Not Found PLD-4
+Add Component: Footprint Not Found PLD-6
+Add Component: Footprint Not Found PLD-4
+Add Component: Footprint Not Found PLD-8
+Add Component: Footprint Not Found PLD-4
+Add Component: Footprint Not Found PLD-8
+Add Component: Footprint Not Found PLD-4
+Add Component: Footprint Not Found PLD-20
+Add Component: Footprint Not Found PLD-4
+Add Component: Footprint Not Found PLD-10
+Add Component: Footprint Not Found PLD-4
+Added Net: Name=3V3
+Added Net: Name=ADC.ALRT
+Added Net: Name=C5V
+Added Net: Name=COLORSENSOR.INT
+Added Net: Name=COLORSENSOR.RST
+Added Net: Name=DISPLAY.LCD.DC/RS
+Added Net: Name=DISPLAY.LCD.RESET
+Added Net: Name=DISPLAY.LCD.SPI.MISO
+Added Net: Name=DISPLAY.LCD.SPI.MOSI
+Added Net: Name=DISPLAY.LCD.SPI.nCE
+Added Net: Name=DISPLAY.LCD.SPI.SCLK
+Added Net: Name=DISPLAY.SDCARD.nCE
+Added Net: Name=DISPLAY.TOUCH.IRQ
+Added Net: Name=DISPLAY.TOUCH.SPI.nCE
+Added Net: Name=ENCODER.A
+Added Net: Name=ENCODER.BTN
+Added Net: Name=ENCODER.B
+Added Net: Name=ENCODER.SWT
+Added Net: Name=GND
+Added Net: Name=GYROSCOPE.CS
+Added Net: Name=GYROSCOPE.DR
+Added Net: Name=GYROSCOPE.INT
+Added Net: Name=GYROSCOPE.SDO
+Added Net: Name=KEYPAD.Col0
+Added Net: Name=KEYPAD.Col1
+Added Net: Name=KEYPAD.Col2
+Added Net: Name=KEYPAD.Row0
+Added Net: Name=KEYPAD.Row1
+Added Net: Name=KEYPAD.Row2
+Added Net: Name=KEYPAD.Row3
+Added Net: Name=MAXSONAR.AN
+Added Net: Name=MAXSONAR.PWM
+Added Net: Name=MAXSONAR.UART.RX
+Added Net: Name=MAXSONAR.UART.TX
+Added Net: Name=MICROPHONE_DS
+Added Net: Name=NAV.DRDY_M
+Added Net: Name=NAV.INT
+Added Net: Name=NAV.SPI_3CS.MISO
+Added Net: Name=NAV.SPI_3CS.MOSI
+Added Net: Name=NAV.SPI_3CS.nCE0
+Added Net: Name=NAV.SPI_3CS.nCE1
+Added Net: Name=NAV.SPI_3CS.nCE2
+Added Net: Name=NAV.SPI_3CS.SCLK
+Added Net: Name=RFID.IRQ
+Added Net: Name=RFID.RST
+Added Net: Name=RFID.SPI.MISO
+Added Net: Name=RFID.SPI.MOSI
+Added Net: Name=RFID.SPI.nCE
+Added Net: Name=RFID.SPI.SCLK
+Added Net: Name=RPi_GPIO.GPIO08
+Added Net: Name=RPi_GPIO.GPIO11
+Added Net: Name=RPi_GPIO.GPIO26
+Added Net: Name=RPi_GPIO.GPIO27
+Added Net: Name=RPi_SPI1.MISO
+Added Net: Name=RPi_SPI1.MOSI
+Added Net: Name=RPi_SPI1.nCE0
+Added Net: Name=RPi_SPI1.nCE1
+Added Net: Name=RPi_SPI1.nCE2
+Added Net: Name=RPi_SPI1.SCLK
+Added Net: Name=RPi_SPI4.MISO
+Added Net: Name=RPi_SPI4.MOSI
+Added Net: Name=RPi_SPI4.nCE0
+Added Net: Name=RPi_SPI4.nCE1
+Added Net: Name=RPi_SPI4.SCLK
+Added Net: Name=RPi_UART5.RX
+Added Net: Name=RPi_UART5.TX
+Added Net: Name=STEPMOTOR.IN1
+Added Net: Name=STEPMOTOR.IN2
+Added Net: Name=STEPMOTOR.IN3
+Added Net: Name=STEPMOTOR.IN4
+Added Net: Name=ULTRASONIC_HC0.ECHO
+Added Net: Name=ULTRASONIC_HC0.TRIG
+Added Net: Name=ULTRASONIC_HC1.ECHO
+Added Net: Name=ULTRASONIC_HC1.TRIG
+Added Class: Name=Connector for Raspberri Pi
+Added Class: Name=Variant 1
+Added Room: Name=Connector for Raspberri Pi
+Added Room: Name=Variant 1
