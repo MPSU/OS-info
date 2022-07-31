@@ -32,7 +32,6 @@ ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=0
-IsVirtualBomDocumentRemoved=0
 OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
@@ -253,6 +252,23 @@ GenerateClassCluster=0
 DocumentUniqueId=RCVKGAAB
 
 [Document13]
+DocumentPath=standos_RPi_view.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=RCVKGAAB
+
+[Document14]
 DocumentPath=..\library\105450-0101.IntLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -269,7 +285,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document14]
+[Document15]
 DocumentPath=..\library\FTDI FT Series.IntLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -286,7 +302,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document15]
+[Document16]
 DocumentPath=..\library\Wuerth_Elektronik_Electromechanical_Components_Switches\WS-TASV SMD Tact Switch 6X6 mm.IntLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -303,7 +319,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document16]
+[Document17]
 DocumentPath=..\library\my_AP_lib_pcb.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -320,7 +336,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MWVPWYJR
 
-[Document17]
+[Document18]
 DocumentPath=..\library\my_AP_lib_sch.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -337,7 +353,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=AQKRETRB
 
-[Document18]
+[Document19]
 DocumentPath=STM32-Nucleo-144.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -354,7 +370,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BHDGCQRI
 
-[Document19]
+[Document20]
 DocumentPath=STM32-Nucleo-144.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -371,7 +387,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document20]
+[Document21]
 DocumentPath=Inertial_systems.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -388,7 +404,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LMBNOKTM
 
-[Document21]
+[Document22]
 DocumentPath=Inertial_systems.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -405,7 +421,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document22]
+[Document23]
 DocumentPath=Rangefinders.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -422,7 +438,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HNPYUGBX
 
-[Document23]
+[Document24]
 DocumentPath=Rangefinders.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -439,7 +455,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document24]
+[Document25]
 DocumentPath=Display.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -456,7 +472,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RFVAHETO
 
-[Document25]
+[Document26]
 DocumentPath=Display.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -473,7 +489,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document26]
+[Document27]
 DocumentPath=Main.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -490,7 +506,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document27]
+[Document28]
 DocumentPath=..\library\URB_LD-20WR3.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -507,7 +523,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LXNXYMMD
 
-[Document28]
+[Document29]
 DocumentPath=..\library\URB_LD-20WR3.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -524,7 +540,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=IPWGVQHB
 
-[Document29]
+[Document30]
 DocumentPath=..\library\fuse.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -541,7 +557,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RBSFOSBL
 
-[Document30]
+[Document31]
 DocumentPath=..\library\USB-B-S-X-X-TH.IntLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -558,7 +574,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document31]
+[Document32]
 DocumentPath=..\library\ETQP4M4R7YFP1\IND_ETQP4M4R7YFP.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -575,25 +591,8 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UPRIRFSN
 
-[Document32]
-DocumentPath=..\library\Vishay\Vishay Sprague Tantalum Chip Capacitor.IntLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
 [Document33]
-DocumentPath=CAMtastic1.Cam
+DocumentPath=..\library\Vishay\Vishay Sprague Tantalum Chip Capacitor.IntLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -626,69 +625,22 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[GeneratedDocument1]
-DocumentPath=Project Outputs for standos\Design Rule Check - standos.html
+[Document35]
+DocumentPath=CAMtastic1.Cam
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
 DItemRevisionGUID=
-
-[GeneratedDocument2]
-DocumentPath=Project Outputs for standos\standos-RectHoles.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument3]
-DocumentPath=Project Outputs for standos\standos-RoundHoles.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Project Outputs for standos\standos-SlotHoles.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Project Outputs for standos\standos.DRR
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Project Outputs for standos\standos.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Project Outputs for standos\standos.GBL
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Project Outputs for standos\standos.GBO
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Project Outputs for standos\standos.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Project Outputs for standos\standos.GM2
-DItemRevisionGUID=
-
-[GeneratedDocument11]
-DocumentPath=Project Outputs for standos\standos.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument12]
-DocumentPath=Project Outputs for standos\standos.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument13]
-DocumentPath=Project Outputs for standos\standos.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument14]
-DocumentPath=Project Outputs for standos\standos.LDP
-DItemRevisionGUID=
-
-[GeneratedDocument15]
-DocumentPath=Project Outputs for standos\standos.REP
-DItemRevisionGUID=
-
-[GeneratedDocument16]
-DocumentPath=Project Outputs for standos\standos.RUL
-DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
 
 [Configuration1]
 Name=Sources
@@ -805,22 +757,12 @@ OutputName20=WireList Netlist
 OutputDocumentPath20=
 OutputVariantName20=
 OutputDefault20=0
-OutputType21=XSpiceNetlist
-OutputName21=Mixed Sim Netlist
-OutputDocumentPath21=
-OutputVariantName21=
-OutputDefault21=0
 
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=PDFCreator
+TargetPrinter=EPSON L120 Series
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
-OutputType1=AdvSimNetlist
-OutputName1=Mixed Sim
-OutputDocumentPath1=
-OutputVariantName1=
-OutputDefault1=0
 
 [OutputGroup3]
 Name=Documentation Outputs
@@ -1582,6 +1524,7 @@ Type116=2
 Type117=3
 Type118=3
 Type119=3
+MultiChannelAlternate=2
 AlternateItemFail=3
 Type122=2
 Type123=1
