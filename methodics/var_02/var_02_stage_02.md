@@ -1,4 +1,4 @@
-## Этап 3 проекта В02
+## Этап 2 проекта В02
 
 __Задание:__  
 1. Скачайте на ПК исполняемые файлы программ с репозитория курса [rangefinder_hcsr04](../../code_examples/Дальномер%20hc-sr04/rangefinder_hcsr04) и [rangefinder_gp2y](../../code_examples/Дальномер%20GP2Y/rangefinder_gp2y).
