@@ -2,7 +2,7 @@
 
 Сборка:
 ```  
-gcc -o encoder_angle encoder_angle.c rotary_encoder.c -lpigpio  
+gcc -o encoder_angle encoder.c rotary_encoder.c -lpigpio  
 ```
 
 Запуск:  
