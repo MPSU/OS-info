@@ -1,7 +1,0 @@
-*.swp
-a.out
-
-# ignore files with no extension
-*
-!/**/
-!*.*
