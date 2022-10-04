@@ -4,7 +4,7 @@
 * [light_detect](./light_detect)
 * [sound_detect](./sound_detect)
 * [rangefinder_hcsr04](./rangefinder_hcsr04)
-* [ragnefindef_gp2y](./ragnefindef_gp2y)
+* [ragnefinder_gp2y](./ragnefinder_gp2y)
 * [color_sense](./color_sense)
 * [led_blinker](./led_blinker)
 * [display_text](./display_text)
