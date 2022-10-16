@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2018 Dmitrii Kaleev (kaleev@org.miet.ru)                      *
+ * Copyright (c) 2022 Sergey Balabaev (sergei.a.balabaev@gmail.com)                      *
  *                                                                             *
  * The MIT License (MIT):                                                      *
  * Permission is hereby granted, free of charge, to any person obtaining a     *
@@ -38,8 +38,8 @@
 #define HIGH 1
 
 //***************************//
-#define TRIG 8 // GPIO PIN TRIG
-#define ECHO 11 // GPIO PIN ECHO
+#define TRIG 11 // GPIO PIN TRIG
+#define ECHO 26 // GPIO PIN ECHO
 //***************************//
 
 void Exiting(int);
@@ -66,7 +66,7 @@ int read_pins_file(char *file)
 
 static int GPIOExport(int pin)
 {
-#define BUFFER_MAX 3
+	#define BUFFER_MAX 3
 	char buffer[BUFFER_MAX];
 	ssize_t bytes_written;
 	int fd;
@@ -105,7 +105,7 @@ static int GPIODirection(int pin, int dir)
 {
 	static const char s_directions_str[] = "in\0out";
 
-#define DIRECTION_MAX 35
+	#define DIRECTION_MAX 35
 	char path[DIRECTION_MAX];
 	int fd;
 
@@ -128,7 +128,7 @@ static int GPIODirection(int pin, int dir)
 
 static int GPIORead(int pin)
 {
-#define VALUE_MAX 30
+	#define VALUE_MAX 30
 	char path[VALUE_MAX];
 	char value_str[3];
 	int fd;
@@ -197,6 +197,8 @@ void help()
 	printf("    -q - quiet\n");
 }
 
+#define TIMEOUT_SEC 2
+
 int main(int argc, char *argv[])
 {
 	int quiet = 0;
@@ -242,9 +244,10 @@ int main(int argc, char *argv[])
 	signal(SIGINT, Exiting_sig);
 	GPIOExport(TRIG);
 	GPIOExport(ECHO);
+	sleep(0.05);
 	GPIODirection(TRIG, OUT);
 	GPIODirection(ECHO, IN);
-	sleep(0.05);
+	
 	int argument = 1;
 	if (quiet)
 		argument++;
@@ -257,7 +260,18 @@ int main(int argc, char *argv[])
 		while (!GPIORead(ECHO)) {
 		}
 		double start_time = clock();
+		int flag = 0;
 		while (GPIORead(ECHO)) {
+			if (clock() - start_time >
+			    TIMEOUT_SEC * CLOCKS_PER_SEC) {
+				flag = 1;
+				break;
+			}
+		}
+		if (flag) {
+			printf("Timeout reached, sleeping for one second\n");
+			sleep(1);
+			continue;
 		}
 		double end_time = clock();
 		search_time = end_time - start_time;
@@ -265,9 +279,9 @@ int main(int argc, char *argv[])
 		sl = atoi(argv[argument]);
 
 		if (!quiet)
-			printf("Length = %lf cm\n", search_time / 58);
+			printf("signal_delay: %lf ms\n", search_time);
 		else
-			printf("%lf\n", search_time / 58);
+			printf("%lf\n", search_time);
 		fflush(stdout);
 		if ((sl > 0) && (sl < 60000))
 			usleep(sl * 1000);

@@ -2,11 +2,11 @@
 
 Сборка:
 ```  
-gcc -o encoder_angle encoder.c rotary_encoder.c -lpigpio  
+gcc -o encoder encoder.c rotary_encoder.c -lpigpio  
 ```
 
 Запуск:  
-sudo ./encoder_angle [-h][-q]  
+sudo ./encoder [-h][-q]  
 -h - описание работы  
 -q - тихий режим, выводится только сообщение при срабатывании датчика  
 
@@ -16,5 +16,5 @@ sudo ./encoder_angle [-h][-q]
 
 Пример: 
 ```
-sudo ./encoder_angle -q  //Вывод значений в "тихом режиме"
+sudo ./encoder -q  //Вывод значений в "тихом режиме"
 ```

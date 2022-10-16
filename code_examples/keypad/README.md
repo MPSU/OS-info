@@ -2,7 +2,7 @@
 
 Сборка:  
 ```
-gcc keypad.c -o keypad -lwiringPi  
+gcc keypad.c -o keypad -lpigpio  
 ```
 
 Запуск:  

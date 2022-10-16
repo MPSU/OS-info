@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2018 Dmitrii Kaleev (kaleev@org.miet.ru)                      *
+ * Copyright (c) 2022 Sergey Balabaev (sergei.a.balabaev@gmail.com)                     *
  *                                                                             *
  * The MIT License (MIT):                                                      *
  * Permission is hereby granted, free of charge, to any person obtaining a     *
@@ -26,13 +26,13 @@
 #include <pigpio.h>
 #include "rotary_encoder.h"
 
-#define GPIO_PIN_A 4
-#define GPIO_PIN_B 7
+#define GPIO_PIN_A 8
+#define GPIO_PIN_B 11
 int quiet = 0;
 void help()
 {
 	printf("    Use this application for reading from encoder\n");
-	printf("    execute format: ./light_detect [-h][-q] \n");
+	printf("    execute format: ./encoder [-h][-q] \n");
 	printf("    return: increment value, when rotate right\n");
 	printf("            decrement value, when rotate left\n");
 	printf("    -h - help\n");
@@ -42,9 +42,9 @@ void help()
 void callback(int way)
 {
 	static int pos = 0;
-	pos += way;
+	pos -= way*360/20;
 	if (!quiet)
-		printf("increment:%d\n", pos);
+		printf("angle increment: %d\n", pos);
 	if (quiet)
 		printf("%d\n", pos);
 }

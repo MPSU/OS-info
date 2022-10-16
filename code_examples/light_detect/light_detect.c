@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2018 Dmitrii Kaleev (kaleev@org.miet.ru)                      *
+ * Copyright (c) 2022 Sergey Balabaev (sergei.a.balabaev@gmail.com)                     *
  *                                                                             *
  * The MIT License (MIT):                                                      *
  * Permission is hereby granted, free of charge, to any person obtaining a     *
@@ -39,7 +39,7 @@
 	}
 
 //***************************//
-#define ADC_PIN 0 // GPIO PIN TRIG
+#define ADC_PIN 1 // GPIO PIN TRIG
 //***************************//
 #define THRESHOLD 5000
 
@@ -82,10 +82,13 @@ int main(int argc, char *argv[])
 	uint16_t pause_time = atoi(argv[argument]);
 	while (true) {
 		adc0 = ads.readADC_SingleEnded(ADC_PIN);
-		if (quiet)
+		if (quiet) {
 			printf("%d\n", adc0);
-		else
+			fflush(stdout);
+		} else {
 			printf("ADC: %d\n", adc0);
+			fflush(stdout);
+		}
 		usleep(pause_time * 1000);
 	}
 }

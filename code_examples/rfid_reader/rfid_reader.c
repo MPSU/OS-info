@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2022 Gerasimenko Evgeniy (evgenyger.work@gmail.com)                      *
+ * Copyright (c) 2022 Sergey Balabaev (sergei.a.balabaev@gmail.com)                     *
  *                                                                             *
  * The MIT License (MIT):                                                      *
  * Permission is hereby granted, free of charge, to any person obtaining a     *
@@ -22,18 +22,13 @@
  ******************************************************************************/
 
 #include <stdio.h>
-#include <math.h>
 #include <unistd.h>
-#include <stdlib.h>
+#include <inttypes.h>
 #include <string.h>
-#include <wiringPi.h>
-#include <ads1115.h>
+#include <stdlib.h>
+#include "MFRC522.h"
 
-#define AD_BASE 122
-#define AD_ADDR 0x48 //i2c address
-
-#define ADC_PIN 2
-
+int debug = 0;
 
 void help()
 {
@@ -43,11 +38,6 @@ void help()
 	printf("    TIME - pause between writing in ms\n");
 	printf("    -h - help\n");
 	printf("    -q - quiet\n");
-}
-
-int clamp(int x, int min, int max)
-{
-	return (x < min) ? min : ((x > max) ? max : x);
 }
 
 int main(int argc, char *argv[])
@@ -64,32 +54,27 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	if ((quiet && argc != 3) || (!quiet && argc != 2)) {
-		help();
-		return 0;
-	}
+	uint8_t mode, bits;
+	int status;
+	unsigned char backBits;
+	unsigned char *uid;
+	unsigned char blockno;
+	char *next;
 
-	if (!quiet)
-		printf("\nThe rangefinder application was started\n\n");
 
-	int argument = 1;
-	if (quiet)
-		argument++;
-	int delay_ms = atoi(argv[argument]);
+	MFRC522_Init(0);
 
-	wiringPiSetup();
-	ads1115Setup(AD_BASE, AD_ADDR);
-	digitalWrite(AD_BASE, 0);
+	while ((status = MFRC522_Request(PICC_REQIDL, &backBits)) != MI_OK)
+		usleep(500);
 
-	while (1) {
-		int ADC_VAL =analogRead(AD_BASE + ADC_PIN);
+	if (status == MI_OK)
 		if (!quiet)
-			printf("ADC: %d \n", ADC_VAL);
-		else
-			printf("%d\n", ADC_VAL);
+			printf("Card detected\n");
 
-		fflush(stdout);
-		usleep(1000 * delay_ms);
+	status = MFRC522_Anticoll(&uid);
+
+	if (status == MI_OK) {
+		// print UID
+		printf("%02x %02x %02x %02x\n", uid[0], uid[1], uid[2], uid[3]);
 	}
-	return 0;
 }

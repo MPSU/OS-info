@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2018 Dmitrii Kaleev (kaleev@org.miet.ru)                      *
+ * Copyright (c) 2022 Sergey Balabaev (sergei.a.balabaev@gmail.com)                     *
  *                                                                             *
  * The MIT License (MIT):                                                      *
  * Permission is hereby granted, free of charge, to any person obtaining a     *
@@ -20,21 +20,27 @@
  * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR       *
  * OTHER DEALINGS IN THE SOFTWARE.                                             *
  ******************************************************************************/
-
-#include <wiringPi.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <pigpio.h>
 #define ROWS 4
 #define COLS 3
 
 char pressedKey = '\0';
 
-//int rowPins[ROWS] = { 6, 27, 0, 1 }; // 25, 16, 17, 18; R3, R2, R1, R0
-//int colPins[COLS] = { 24, 29, 28 }; // 19 ,21, 20; C2, C1, C0
+//int rowPins[ROWS] = { 25, 16, 17, 18 }; // R4, R3, R2, R1				// 25, 16, 17, 18; R3, R2, R1, R0
+//int colPins[COLS] = { 19, 21, 20 };  // C3, C2, C1				// 19 ,21, 20; C2, C1, C0
 
-int rowPins[ROWS] = { 10, 14, 6, 7 }; // 8, 11, 25, 4; R3, R2, R1, R0
-int colPins[COLS] = { 21, 22, 26 }; // 5 ,6, 7; C2, C1, C0
+//int rowPins[ROWS] = { 4, 25, 11, 8 }; // R3, R2, R1, R0
+//int colPins[COLS] = { 7, 6, 5 }; // C2, C1, C0
+
+int rowPins[ROWS] = { 27, 26, 11, 8 }; // R3, R2, R1, R0
+int colPins[COLS] = { 25, 13, 12 }; // C2, C1, C0
+
+//int rowPins[ROWS] = { 18, 17, 16, 25 }; // R4, R3, R2, R1				// 25, 16, 17, 18; R3, R2, R1, R0
+//int colPins[COLS] = { 20, 21, 19 };  // C3, C2, C1				// 19 ,21, 20; C2, C1, C0
+
 
 char keys[ROWS][COLS] = { { '1', '2', '3' },
 			  { '4', '5', '6' },
@@ -44,43 +50,37 @@ char keys[ROWS][COLS] = { { '1', '2', '3' },
 void init_keypad()
 {
 	for (int c = 0; c < COLS; c++) {
-		pinMode(colPins[c], OUTPUT);
-		digitalWrite(colPins[c], HIGH);
+		gpioSetMode(colPins[c], PI_INPUT);
 	}
 
 	for (int r = 0; r < ROWS; r++) {
-		pinMode(rowPins[r], INPUT);
+		gpioSetMode(rowPins[r], PI_OUTPUT);
+		gpioWrite(rowPins[r], 1);
 	}
-	system("raspi-gpio set 4 pu");
-	system("raspi-gpio set 8 pu");
-	system("raspi-gpio set 11 pu");
-	system("raspi-gpio set 25 pu");
 }
 
-int findLowRow()
+int findHighCol()
 {
-	for (int r = 0; r < ROWS; r++) {
-		if (digitalRead(rowPins[r]) == LOW)
-			return r;
+	for (int c = 0; c < COLS; c++) {
+		if (gpioRead(colPins[c]) == 1)
+			return c;
 	}
 	return -1;
 }
 
 char get_key()
 {
-	int rowIndex;
+	int colIndex;
 
-	for (int c = 0; c < COLS; c++) {
-		digitalWrite(colPins[c], LOW);
-
-		rowIndex = findLowRow();
-		if (rowIndex > -1) {
+	for (int r = 0; r < ROWS; r++) {
+		gpioWrite(rowPins[r], 1);
+		colIndex = findHighCol();
+		if (colIndex > -1) {
 			if (!pressedKey)
-				pressedKey = keys[rowIndex][c];
+				pressedKey = keys[r][colIndex];
 			return pressedKey;
 		}
-
-		digitalWrite(colPins[c], HIGH);
+		gpioWrite(rowPins[r], 0);
 	}
 
 	pressedKey = '\0';
@@ -110,28 +110,21 @@ int main(int argc, char *argv[])
 			return 0;
 		}
 	}
-	wiringPiSetup();
+	gpioInitialise();
 	init_keypad();
 	system("clear");
-	if (!quiet) {
-		while (1) {
-			char x = get_key();
-			if (x)
+	while (1) {
+		char x = get_key();
+		if (x) {
+			if (!quiet)
 				printf("pressed: %c\n", x);
 			else
-				printf("no key pressed\n");
-
-			delay(250);
-			system("clear");
-		}
-	} else {
-		while (1) {
-			char x = get_key();
-			if (x)
 				printf("%c\n", x);
-			delay(250);
-			system("clear");
-		}
+		} else if (!quiet)
+			printf("no key pressed\n");
+		time_sleep(0.5);
+		system("clear");
 	}
+	gpioTerminate();
 	return 0;
 }
