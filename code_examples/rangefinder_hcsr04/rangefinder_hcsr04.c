@@ -232,13 +232,6 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	if (strcmp(mode, "-f") == 0) {
-		char *file = argv[2 + quiet];
-		if (read_pins_file(file) < 0)
-			return -1;
-		else
-			return 0;
-	}
 
 	double search_time = 0;
 	signal(SIGINT, Exiting_sig);
