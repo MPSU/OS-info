@@ -29,28 +29,33 @@
 
 char pressedKey = '\0';
 
-//int rowPins[ROWS] = { 25, 16, 17, 18 }; // R4, R3, R2, R1				// 25, 16, 17, 18; R3, R2, R1, R0
-//int colPins[COLS] = { 19, 21, 20 };  // C3, C2, C1				// 19 ,21, 20; C2, C1, C0
+#define VAR8
 
-//int rowPins[ROWS] = { 4, 25, 11, 8 }; // R3, R2, R1, R0
-//int colPins[COLS] = { 7, 6, 5 }; // C2, C1, C0
+#ifdef VAR6
+int rowPins[ROWS] = { 18, 17, 16, 25 }; // R0, R1, R2, R3				
+int colPins[COLS] = { 20, 21, 19 };  // C0, C1, C2				
+#endif
 
-int rowPins[ROWS] = { 27, 26, 11, 8 }; // R3, R2, R1, R0
-int colPins[COLS] = { 25, 13, 12 }; // C2, C1, C0
+#ifdef VAR8
+int rowPins[ROWS] = { 4, 25, 11, 8 }; // R0, R1, R2, R3	
+int colPins[COLS] = { 7, 6, 5 }; // C0, C1, C2
+#endif
 
-//int rowPins[ROWS] = { 18, 17, 16, 25 }; // R4, R3, R2, R1				// 25, 16, 17, 18; R3, R2, R1, R0
-//int colPins[COLS] = { 20, 21, 19 };  // C3, C2, C1				// 19 ,21, 20; C2, C1, C0
-
+#ifdef VAR10
+int rowPins[ROWS] = { 18, 17, 16, 25 }; // R0, R1, R2, R3				
+int colPins[COLS] = { 20, 21, 19 };  // C0, C1, C2			
+#endif
 
 char keys[ROWS][COLS] = { { '1', '2', '3' },
-			  { '4', '5', '6' },
-			  { '7', '8', '9' },
-			  { '*', '0', '#' } };
+			  			  { '4', '5', '6' },
+			  			  { '7', '8', '9' },
+			  			  { '*', '0', '#' } };
 
 void init_keypad()
 {
 	for (int c = 0; c < COLS; c++) {
 		gpioSetMode(colPins[c], PI_INPUT);
+		gpioWrite(colPins[c], 0);
 	}
 
 	for (int r = 0; r < ROWS; r++) {
