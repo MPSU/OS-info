@@ -22,10 +22,10 @@
  ******************************************************************************/
 
 #include <stdio.h>
-#include <pigpio.h>
+#include <bcm2835.h>
 #include <stdlib.h>
 #include <string.h>
-#define STEP_DELAY 2000
+#define STEP_DELAY 1
 
 /*
 2000  7 RPM
@@ -47,58 +47,58 @@ void loop()
 {
 	switch (step) {
 	case 0:
-		gpioWrite(Pin1, PI_LOW);
-		gpioWrite(Pin2, PI_LOW);
-		gpioWrite(Pin3, PI_LOW);
-		gpioWrite(Pin4, PI_HIGH);
+		bcm2835_gpio_write(Pin1, LOW);
+		bcm2835_gpio_write(Pin2, LOW);
+		bcm2835_gpio_write(Pin3, LOW);
+		bcm2835_gpio_write(Pin4, HIGH);
 		break;
 	case 1:
-		gpioWrite(Pin1, PI_LOW);
-		gpioWrite(Pin2, PI_LOW);
-		gpioWrite(Pin3, PI_HIGH);
-		gpioWrite(Pin4, PI_HIGH);
+		bcm2835_gpio_write(Pin1, LOW);
+		bcm2835_gpio_write(Pin2, LOW);
+		bcm2835_gpio_write(Pin3, HIGH);
+		bcm2835_gpio_write(Pin4, HIGH);
 		break;
 	case 2:
-		gpioWrite(Pin1, PI_LOW);
-		gpioWrite(Pin2, PI_LOW);
-		gpioWrite(Pin3, PI_HIGH);
-		gpioWrite(Pin4, PI_LOW);
+		bcm2835_gpio_write(Pin1, LOW);
+		bcm2835_gpio_write(Pin2, LOW);
+		bcm2835_gpio_write(Pin3, HIGH);
+		bcm2835_gpio_write(Pin4, LOW);
 		break;
 	case 3:
-		gpioWrite(Pin1, PI_LOW);
-		gpioWrite(Pin2, PI_HIGH);
-		gpioWrite(Pin3, PI_HIGH);
-		gpioWrite(Pin4, PI_LOW);
+		bcm2835_gpio_write(Pin1, LOW);
+		bcm2835_gpio_write(Pin2, HIGH);
+		bcm2835_gpio_write(Pin3, HIGH);
+		bcm2835_gpio_write(Pin4, LOW);
 		break;
 	case 4:
-		gpioWrite(Pin1, PI_LOW);
-		gpioWrite(Pin2, PI_HIGH);
-		gpioWrite(Pin3, PI_LOW);
-		gpioWrite(Pin4, PI_LOW);
+		bcm2835_gpio_write(Pin1, LOW);
+		bcm2835_gpio_write(Pin2, HIGH);
+		bcm2835_gpio_write(Pin3, LOW);
+		bcm2835_gpio_write(Pin4, LOW);
 		break;
 	case 5:
-		gpioWrite(Pin1, PI_HIGH);
-		gpioWrite(Pin2, PI_HIGH);
-		gpioWrite(Pin3, PI_LOW);
-		gpioWrite(Pin4, PI_LOW);
+		bcm2835_gpio_write(Pin1, HIGH);
+		bcm2835_gpio_write(Pin2, HIGH);
+		bcm2835_gpio_write(Pin3, LOW);
+		bcm2835_gpio_write(Pin4, LOW);
 		break;
 	case 6:
-		gpioWrite(Pin1, PI_HIGH);
-		gpioWrite(Pin2, PI_LOW);
-		gpioWrite(Pin3, PI_LOW);
-		gpioWrite(Pin4, PI_LOW);
+		bcm2835_gpio_write(Pin1, HIGH);
+		bcm2835_gpio_write(Pin2, LOW);
+		bcm2835_gpio_write(Pin3, LOW);
+		bcm2835_gpio_write(Pin4, LOW);
 		break;
 	case 7:
-		gpioWrite(Pin1, PI_HIGH);
-		gpioWrite(Pin2, PI_LOW);
-		gpioWrite(Pin3, PI_LOW);
-		gpioWrite(Pin4, PI_HIGH);
+		bcm2835_gpio_write(Pin1, HIGH);
+		bcm2835_gpio_write(Pin2, LOW);
+		bcm2835_gpio_write(Pin3, LOW);
+		bcm2835_gpio_write(Pin4, HIGH);
 		break;
 	default:
-		gpioWrite(Pin1, PI_LOW);
-		gpioWrite(Pin2, PI_LOW);
-		gpioWrite(Pin3, PI_LOW);
-		gpioWrite(Pin4, PI_LOW);
+		bcm2835_gpio_write(Pin1, LOW);
+		bcm2835_gpio_write(Pin2, LOW);
+		bcm2835_gpio_write(Pin3, LOW);
+		bcm2835_gpio_write(Pin4, LOW);
 		break;
 	}
 }
@@ -147,16 +147,16 @@ int main(int argc, char *argv[])
 		rotate_dir = 0;
 	else
 		rotate_dir = 1;
-	if ((step_delay < 800) || (step_delay > 1000000))
+	if ((step_delay < 0) || (step_delay > 20))
 		step_delay = STEP_DELAY;
 
-	if (gpioInitialise() < 0)
+	if (!bcm2835_init())
 		return 1;
 
-	gpioSetMode(Pin1, PI_OUTPUT);
-	gpioSetMode(Pin2, PI_OUTPUT);
-	gpioSetMode(Pin3, PI_OUTPUT);
-	gpioSetMode(Pin4, PI_OUTPUT);
+	bcm2835_gpio_fsel(Pin1, BCM2835_GPIO_FSEL_OUTP);
+	bcm2835_gpio_fsel(Pin2, BCM2835_GPIO_FSEL_OUTP);
+	bcm2835_gpio_fsel(Pin3, BCM2835_GPIO_FSEL_OUTP);
+	bcm2835_gpio_fsel(Pin4, BCM2835_GPIO_FSEL_OUTP);
 
 	int intang = abs(angle) * 11.377;
 	if (rotate_dir)
@@ -167,13 +167,13 @@ int main(int argc, char *argv[])
 			step--;
 			if (step < 0)
 				step = 7;
-			gpioDelay(step_delay);
+			bcm2835_delay(step_delay);
 		} else {
 			loop();
 			step++;
 			if (step > 7)
 				step = 0;
-			gpioDelay(step_delay);
+			bcm2835_delay(step_delay);
 		}
-	gpioTerminate();
+		bcm2835_close();
 }
