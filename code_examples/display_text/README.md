@@ -7,9 +7,10 @@ gcc -o lcd main.c lcd.c -lgd -lfreetype -lm
 
 Запуск:  
 ```
-sudo ./lcd test_input  
+sudo ./lcd [-f file][-i text]  
 ```
-test_input - текстовый файл для вывода  
+-f вывод данных на дисплей из текстового файла file
+-i вывод на дисплей строки text
 
 Выходные данные: 
 Печать заданного текста на дисплее  
