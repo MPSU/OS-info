@@ -77,12 +77,13 @@ int main(int argc, char *argv[])
 			if (!quiet) {
 				printf("%02x %02x %02x %02x\n", uid[0], uid[1],
 				       uid[2], uid[3]);
+				fflush(stdout);
 				break;
 			}
 			printf("%02x %02x %02x %02x\n", uid[0], uid[1], uid[2],
 			       uid[3]);
+			fflush(stdout);
 			sleep(1);
 		}
-		fflush(stdout);
 	}
 }
