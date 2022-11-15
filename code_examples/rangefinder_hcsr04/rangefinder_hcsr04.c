@@ -272,7 +272,7 @@ int main(int argc, char *argv[])
 			continue;
 		}
 		double end_time = clock();
-		search_time = (end_time - start_time)/CLK_TCK;
+		search_time = (end_time - start_time)/CLOCKS_PER_SEC;
 
 		sl = atoi(argv[argument]);
 
