@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2022 Sergey Balabaev (sergei.a.balabaev@gmail.com)                    *
+ * Copyright (c) 2022 Sergey Balabaev (sergei.a.balabaev@gmail.com)            *
  *                                                                             *
  * The MIT License (MIT):                                                      *
  * Permission is hereby granted, free of charge, to any person obtaining a     *
@@ -92,37 +92,43 @@ int main(int argc, char *argv[])
 	sleep(1);
 	// Read 8 bytes of data from register(0x94)
 	// cData lsb, cData msb, red lsb, red msb, green lsb, green msb, blue lsb, blue msb
-	char reg[1] = { 0x94 };
-	write(file, reg, 1);
-	char data[8] = { 0 };
-	if (read(file, data, 8) != 8) {
-		printf("Erorr : Input/output Erorr \n");
-	} else {
-		// Convert the data
-		int cData = (data[1] * 256 + data[0]);
-		int red = (data[3] * 256 + data[2]);
-		int green = (data[5] * 256 + data[4]);
-		int blue = (data[7] * 256 + data[6]);
-		// Calculate luminance
-		float luminance = (-0.32466) * (red) + (1.57837) * (green) +
-				  (-0.73191) * (blue);
-		if (luminance < 0) {
-			luminance = 0;
-		}
-		// Output data to screen
-		if (!quiet) {
-			printf("Red color luminance : %d lux \n", red);
-			printf("Green color luminance : %d lux \n", green);
-			printf("Blue color luminance : %d lux \n", blue);
-			printf("IR luminance : %d lux \n", cData);
-			printf("Ambient Light Luminance : %.2f lux \n",
-			       luminance);
-			fflush(stdout);
-		} else
-			while (1) {
-				printf("code: %d %d %d", red, green, blue);
+
+	while (1) {
+		char reg[1] = { 0x94 };
+		write(file, reg, 1);
+		char data[8] = { 0 };
+		if (read(file, data, 8) != 8) {
+			printf("Erorr : Input/output Erorr \n");
+		} else {
+			// Convert the data
+			int cData = (data[1] * 256 + data[0]);
+			int red = (data[3] * 256 + data[2]);
+			int green = (data[5] * 256 + data[4]);
+			int blue = (data[7] * 256 + data[6]);
+			// Calculate luminance
+			float luminance = (-0.32466) * (red) +
+					  (1.57837) * (green) +
+					  (-0.73191) * (blue);
+			if (luminance < 0) {
+				luminance = 0;
+			}
+			// Output data to screen
+			if (!quiet) {
+				printf("Red color luminance : %d lux \n", red);
+				printf("Green color luminance : %d lux \n",
+				       green);
+				printf("Blue color luminance : %d lux \n",
+				       blue);
+				printf("IR luminance : %d lux \n", cData);
+				printf("Ambient Light Luminance : %.2f lux \n",
+				       luminance);
+				fflush(stdout);
+				break;
+			} else {
+				printf("code: %d %d %d\n", red, green, blue);
 				fflush(stdout);
 				usleep(SLEEP_TIME * 1000);
 			}
+		}
 	}
 }
