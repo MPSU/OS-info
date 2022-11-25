@@ -23,6 +23,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <bcm2835.h>
 #define ROWS 4
 #define COLS 3
 
@@ -42,18 +43,12 @@ int rowPins[ROWS] = { 18, 17, 16, 25 }; // R0, R1, R2, R3
 int colPins[COLS] = { 20, 21, 19 }; // C0, C1, C2
 #endif
 
-#ifdef BCM
-#include <bcm2835.h>
-#else
-#include <pigpio.h>
-#endif
 
 char keys[ROWS][COLS] = { { '1', '2', '3' },
 			  { '4', '5', '6' },
 			  { '7', '8', '9' },
 			  { '*', '0', '#' } };
 
-#ifdef BCM
 void init_keypad()
 {
 	for (int c = 0; c < COLS; c++) {
@@ -93,50 +88,6 @@ char get_key()
 	return pressedKey;
 }
 
-#else
-void init_keypad()
-{
-	for (int c = 0; c < COLS; c++) {
-		gpioSetMode(colPins[c], PI_INPUT);
-		gpioWrite(colPins[c], 0);
-	}
-
-	for (int r = 0; r < ROWS; r++) {
-		gpioSetMode(rowPins[r], PI_OUTPUT);
-		gpioWrite(rowPins[r], 1);
-	}
-}
-
-int findHighCol()
-{
-	for (int c = 0; c < COLS; c++) {
-		if (gpioRead(colPins[c]) == 1)
-			return c;
-	}
-	return -1;
-}
-
-char get_key()
-{
-	int colIndex;
-
-	for (int r = 0; r < ROWS; r++) {
-		gpioWrite(rowPins[r], 1);
-		colIndex = findHighCol();
-		if (colIndex > -1) {
-			if (!pressedKey)
-				pressedKey = keys[r][colIndex];
-			return pressedKey;
-		}
-		gpioWrite(rowPins[r], 0);
-	}
-
-	pressedKey = '\0';
-	return pressedKey;
-}
-
-#endif
-
 void help()
 {
 	printf("    Use this application for keypad\n");
@@ -160,12 +111,7 @@ int main(int argc, char *argv[])
 			return 0;
 		}
 	}
-#ifdef BCM
 	bcm2835_init();
-#else
-	gpioInitialise();
-#endif
-
 	init_keypad();
 	if (!quiet)
 		system("clear");
@@ -181,19 +127,9 @@ int main(int argc, char *argv[])
 			system("clear");
 			printf("no key pressed\n");
 		}
-#ifdef BCM
 		bcm2835_delay(500);
-#else
-		time_sleep(0.5);
-#endif
 		fflush(stdout);
 	}
-
-#ifdef BCM
 	bcm2835_close();
-#else
-	gpioTerminate();
-#endif
-
 	return 0;
 }
