@@ -11,8 +11,6 @@
 void demo_text(char* text) {
     gdImagePtr im = gdImageCreateTrueColor(LCD_WIDTH, LCD_HEIGHT);
     int white = gdImageColorAllocate(im, 255, 255, 255);
-    int red = gdImageColorAllocate(im, 255, 0, 0);
-
     char buff[STRING_LENGTH + 1];
     int str_ptr = 0;
     int num_str = 0;
