@@ -35,8 +35,8 @@
 #define LCD_MODE_CMD    GPIO_VALUE_LOW
 #define LCD_MODE_DATA   GPIO_VALUE_HIGH
 
-#define LCD_PIN_RST     26
-#define LCD_PIN_DC      11
+#define LCD_PIN_RST     5
+#define LCD_PIN_DC      6
 
 #define LCD_WIDTH       480
 #define LCD_HEIGHT      320
@@ -87,10 +87,6 @@ int gpio_export(int gpio_num);
 int gpio_unexport(int gpio_num);
 int gpio_set_direction(int gpio_num, const char* dir);
 int gpio_set_value(int gpio_num, const char* value);
-
-int spi_file;
-struct spi_ioc_transfer trx;
-uint32_t scratch32;
 
 void spi_init();
 void spi_deinit();

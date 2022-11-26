@@ -1,5 +1,9 @@
 #include "lcd.h"
 
+int spi_file;
+struct spi_ioc_transfer trx;
+uint32_t scratch32;
+
 // GPIO functions
 
 static int write_to_file(const char *fname, const char *wdata) {
