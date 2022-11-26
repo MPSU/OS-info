@@ -7,10 +7,8 @@ gcc -o lcd main.c lcd.c -lgd -lfreetype -lm
 
 Запуск:  
 ```
-sudo ./lcd [-f file][-i text]  
-```
--f вывод данных на дисплей из текстового файла file  
--i вывод на дисплей строки text  
+sudo ./lcd [text]  
+``` 
 
 Выходные данные: 
 Печать заданного текста на дисплее  
@@ -18,8 +16,9 @@ sudo ./lcd [-f file][-i text]
 Пример работы: 
 
 ```
-sudo ./lcd -f file  //вывод из текстового файла
-sudo ./lcd -i text  //вывод строки text
+sudo ./lcd test_string # печать текста test_string
+sudo ./lcd "text with spaces" # печать текста с пробелами
+echo "text with spaces" | xargs -I {} sudo ./lcd "{}" # печать вывода другого приложения
 ```
 
 Для корректной сборки программы необходимо установить приложенную библиотеку libgd-2.3.3  
