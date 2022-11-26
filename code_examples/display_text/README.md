@@ -30,6 +30,6 @@ cd libgd-2.3.3
 chmod +x configure  
 ./configure  
 make  
-make install  
+sudo make install  
 ```
 
