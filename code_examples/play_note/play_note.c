@@ -48,54 +48,60 @@ int main(int argc, char *argv[])
 
 	char buf[2];
 	while (1) {
+	char playing_str[16];
 		scanf("%s", buf);
 		if ((buf[0] == 'A') && (buf[1] != '#')) {
-			system("aplay ./notes/A4.wav -q");
-			printf("Playing A#");
+			system("aplay ./notes/A4.wav -q &");
+			sprintf(playing_str, "%s", "Playing A#");
 		}
 		if (buf[0] == 'B') {
-			system("aplay ./notes/B4.wav -q");
-			printf("Playing B");
+			system("aplay ./notes/B4.wav -q &");
+			sprintf(playing_str, "%s", "Playing B");
+
 		}
 		if ((buf[0] == 'C') && (buf[1] != '#')) {
-			system("aplay ./notes/C4.wav -q");
-			printf("Playing C#");
+			system("aplay ./notes/C4.wav -q &");
+			sprintf(playing_str, "%s", "Playing C#");
 		}
 		if ((buf[0] == 'D') && (buf[1] != '#')) {
-			system("aplay ./notes/D4.wav -q");
-			printf("Playing D#");
+			system("aplay ./notes/D4.wav -q &");
+			sprintf(playing_str, "%s", "Playing D#");
 		}
 		if (buf[0] == 'E') {
-			system("aplay ./notes/E4.wav -q");
-			printf("Playing E");
+			system("aplay ./notes/E4.wav -q &");
+			sprintf(playing_str, "%s", "Playing E");
 		}
 		if ((buf[0] == 'F') && (buf[1] != '#')) {
-			system("aplay ./notes/F4.wav -q");
-			printf("Playing F#");
+			system("aplay ./notes/F4.wav -q &");
+			sprintf(playing_str, "%s", "Playing F#");
 		}
 		if ((buf[0] == 'G') && (buf[1] != '#')) {
-			system("aplay ./notes/G4.wav -q");
-			printf("Playing G#");
+			system("aplay ./notes/G4.wav -q &");
+			sprintf(playing_str, "%s", "Playing G#");
 		}
 		if ((buf[0] == 'A') && (buf[1] == '#')) {
-			system("aplay ./notes/Ad4.wav -q");
-			printf("Playing A#");
+			system("aplay ./notes/Ad4.wav -q &");
+			sprintf(playing_str, "%s", "Playing A#");
 		}
 		if ((buf[0] == 'C') && (buf[1] == '#')) {
-			system("aplay ./notes/Cd4.wav -q");
-			printf("Playing C#");
+			system("aplay ./notes/Cd4.wav -q &");
+			sprintf(playing_str, "%s", "Playing C#");
 		}
 		if ((buf[0] == 'D') && (buf[1] == '#')) {
-			system("aplay ./notes/Dd4.wav -q");
-			printf("Playing D#");
+			system("aplay ./notes/Dd4.wav -q &");
+			sprintf(playing_str, "%s", "Playing D#");
 		}
 		if ((buf[0] == 'F') && (buf[1] == '#')) {
-			system("aplay ./notes/Fd4.wav -q");
-			printf("Playing F#");
+			system("aplay ./notes/Fd4.wav -q &");
+			sprintf(playing_str, "%s", "Playing F#");
 		}
 		if ((buf[0] == 'G') && (buf[1] == '#')) {
-			system("aplay ./notes/Gd4.wav -q");
-			printf("Playing G#");
+			system("aplay ./notes/Gd4.wav -q &");
+			sprintf(playing_str, "%s", "Playing G#");
+		}
+		if (!quiet) {
+			printf("%s", playing_str);
+			printf("\n");
 		}
 		fflush(stdout);
 	}
