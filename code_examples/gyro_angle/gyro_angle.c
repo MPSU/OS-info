@@ -233,7 +233,6 @@ int main(int argc, char *argv[])
 		}
 	if (state == 2)
 		while (1) {
-			system("clear");
 			askGiro(file, 'X', TIME);
 			askGiro(file, 'Y', TIME);
 			askGiro(file, 'Z', TIME);
